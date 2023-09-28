@@ -1,3 +1,2 @@
 register-app
-test
 
