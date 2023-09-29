@@ -7,6 +7,12 @@ pipeline {
     }
 
     stages {
+        stage("Cleanup Workspace"){
+                steps {
+                cleanWs()
+                }
+        }
+        
         stage('Git checkout') {
             steps {
                 git branch: 'main', changelog: false, poll: false, url: 'https://github.com/parvaze-masud/java-web-application.git'
