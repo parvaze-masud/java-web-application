@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  web:
+    image: "parvazemasud/java-webapp-img:latest"
+    ports:
+      - "8086:8080"
