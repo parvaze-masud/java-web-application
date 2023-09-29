@@ -6,7 +6,7 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
 $ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 $ sudo yum upgrade
-$ amazon-linux-extras install epel
+$ sudo amazon-linux-extras install epel
 $ sudo amazon-linux-extras install java-openjdk11 -y
 $ yum install java-11-amazon-corretto -y
 $ sudo yum install jenkins -y
@@ -57,6 +57,8 @@ $ nano Dockerfile      //Below is the content of Dockerfile
 FROM tomcat:latest
 RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 COPY ./*.war /usr/local/tomcat/webapps
+
+$ cd /opt/Docker
 $ docker build -t webapp:v1 .
 $ docker stop registerapp
 $ docker rm registerapp
